@@ -28,4 +28,16 @@ it ('should return null when range From and To bigger than 1000', () => {
 it ('should return null when range From and To smaller than 1000', () => {
     expect(multiplyInputRange(-1, 0)).toBe(null);
 });
+//From or To contain NULL
+it ('should return null when From is NULL', () => {
+    expect(multiplyInputRange(2, null)).toBe(null);
+});
+
+it ('should return null when To is NULL', () => {
+    expect(multiplyInputRange(null, 4)).toBe(null);
+});
+
+it ('should return null when From and To are NULL', () => {
+    expect(multiplyInputRange(null, null)).toBe(null);
+});
 
