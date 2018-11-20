@@ -7,6 +7,10 @@ it ('should multipy within input range with normal input range', () => {
 it ('should return null when range From is bigger than To', () => {
     expect(multiplyInputRange(4, 2)).toBe(null);
 });
+//From Equal To
+it ('should return null when range From is bigger than To', () => {
+    expect(multiplyInputRange(4, 4)).toBe(null);
+});
 //From or To not within range between 1 and 1000
 it ('should return null when range From less than 1', () => {
     expect(multiplyInputRange(0, 2)).toBe(null);

@@ -1,7 +1,8 @@
-function multiplyInputRange(a, b){
-    if(a<b && a<=1000 && b<=1000 && a!=null && a!=null && a>=1 && b>=1){
-        var from = a;
-        var to = b;
+function multiplyInputRange(from, to){
+    if(checkStartLessOrEqualEnd(from,to) || !checkStartAndEndinValidRange(from, to) || from==null || to==null){
+        return null;
+    }
+    else{
         var tmpLastRowBoxLengthCount = [];
         var tmpString="";
         var resultString="";
@@ -32,9 +33,26 @@ function multiplyInputRange(a, b){
         }
         return resultString; 
     }
-    else {
-        return null;
-    }
     
 }
+
+function checkStartLessOrEqualEnd(from, to){
+    if(from>to || from==to){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+function checkStartAndEndinValidRange(from, to){
+    if(from>1000 || from<1 || to>1000 || to<1){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+
 module.exports = multiplyInputRange;
