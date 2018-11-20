@@ -1,5 +1,5 @@
 function multiplyInputRange(a, b){
-    if(a<b && a<=1000 && b<=1000){
+    if(a<b && a<=1000 && b<=1000 && a!=null && a!=null && a>=1 && b>=1){
         var from = a;
         var to = b;
         var tmpLastRowBoxLengthCount = [];
@@ -32,7 +32,7 @@ function multiplyInputRange(a, b){
         }
         return resultString; 
     }
-    else if(a>b || a<1 || a>1000 || b<1 || b>1000 || a===null || b===null){
+    else {
         return null;
     }
     
